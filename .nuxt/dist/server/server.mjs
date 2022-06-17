@@ -108,7 +108,12 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs ($id_e6f12003)
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
 // - /node_modules/nuxt/dist/head/runtime/components.mjs ($id_b2a29d6f)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
+// - /node_modules/nuxt/dist/pages/runtime/utils.mjs ($id_80f433aa)
+// - /node_modules/nuxt/dist/app/components/utils.mjs ($id_69c52686)
+// - /pages/index.vue?macro=true ($id_5dd70240)
+// - /pages/index.vue ($id_cca58e97)
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // - /node_modules/nuxt/dist/app/compat/capi.mjs ($id_0c5717a4)
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs ($id_780fb80c)
@@ -116,7 +121,7 @@ __vite_ssr_exports__.default = (ctx) => entry(ctx);
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
 // - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
+// - /components/Header.vue ($id_4e284fc3)
 // - /app.vue ($id_2b46e842)
 // Dependencies: 
 
@@ -187,7 +192,7 @@ Object.defineProperty(__vite_ssr_exports__, "publicAssetsURL", { enumerable: tru
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/paths.mjs ($id_60644bf0)
 // - /node_modules/nuxt/dist/app/composables/router.mjs ($id_db4d90a8)
 // - /node_modules/nuxt/dist/app/components/nuxt-link.mjs ($id_ffac87b5)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // Dependencies: 
 
 // --------------------
@@ -221,7 +226,8 @@ import("file:///home/petr/Documents/meteostanice-web/node_modules/ufo/dist/index
 // - /node_modules/nuxt/dist/app/plugins/preload.server.mjs ($id_9871bba0)
 // - /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs ($id_e6f12003)
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs ($id_780fb80c)
 // Dependencies: 
@@ -255,7 +261,6 @@ Object.defineProperty(__vite_ssr_exports__, "isVue3", { enumerable: true, config
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/nuxt/dist/app/compat/legacy-app.mjs ($id_a48341bc)
 // - /node_modules/nuxt/dist/app/composables/component.mjs ($id_53345950)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/hookable/dist/index.mjs ($id_a2c811c4)
@@ -721,6 +726,8 @@ Object.defineProperty(__vite_ssr_exports__, "defineNuxtComponent", { enumerable:
 // Request: /node_modules/vue-router/dist/vue-router.cjs.js
 // Parents: 
 // - /node_modules/nuxt/dist/app/composables/component.mjs ($id_53345950)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
 // Dependencies: 
 
 // --------------------
@@ -1176,7 +1183,7 @@ import("file:///home/petr/Documents/meteostanice-web/node_modules/cookie-es/dist
 // Parents: 
 // - /node_modules/nuxt/dist/app/composables/cookie.mjs ($id_511b441d)
 // - /node_modules/nuxt/dist/app/composables/router.mjs ($id_db4d90a8)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // Dependencies: 
 
 // --------------------
@@ -1557,7 +1564,7 @@ const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/@nuxtjs/t
 
 // --------------------
 const $id_0a1402e6 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = "/*! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:\"\"}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }";
+__vite_ssr_exports__.default = "/*! tailwindcss v3.1.3 | MIT License | https://tailwindcss.com*/*,:after,:before{border:0 solid #e5e7eb;box-sizing:border-box}:after,:before{--tw-content:\"\"}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{line-height:inherit;margin:0}hr{border-top-width:1px;color:inherit;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,\"Liberation Mono\",\"Courier New\",monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{border-collapse:collapse;border-color:inherit;text-indent:0}button,input,optgroup,select,textarea{color:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{color:#9ca3af;opacity:1}input:-ms-input-placeholder,textarea:-ms-input-placeholder{color:#9ca3af;opacity:1}input::placeholder,textarea::placeholder{color:#9ca3af;opacity:1}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{height:auto;max-width:100%}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.sticky{position:-webkit-sticky;position:sticky}.top-0{top:0}.mx-auto{margin-left:auto;margin-right:auto}.flex{display:flex}.h-16{height:4rem}.items-center{align-items:center}.justify-between{justify-content:space-between}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity))}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}";
 }
 
 
@@ -1570,7 +1577,7 @@ __vite_ssr_exports__.default = "/*! tailwindcss v3.1.3 | MIT License | https://t
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/components.plugin.mjs ($id_a0ade53b)
 // - /node_modules/nuxt/dist/head/runtime/lib/vueuse-head.plugin.mjs ($id_e6f12003)
 // - /node_modules/nuxt/dist/head/runtime/plugin.mjs ($id_a2650341)
-// - /node_modules/nuxt/dist/app/plugins/router.mjs ($id_7fe121f6)
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
 // --------------------
 const $id_643d0c5b = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/plugins/preload.server.mjs");
@@ -1581,7 +1588,7 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/plugin.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/plugins/router.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/router.mjs");
 
 __vite_ssr_exports__.default = [
   __vite_ssr_import_0__.default,
@@ -2418,178 +2425,473 @@ __vite_ssr_exports__.default = {"globalMeta":{"charset":"utf-8","viewport":"widt
 
 
 // --------------------
-// Request: /node_modules/nuxt/dist/app/plugins/router.mjs
+// Request: /node_modules/nuxt/dist/pages/runtime/router.mjs
 // Parents: 
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/plugins/server.mjs ($id_643d0c5b)
 // Dependencies: 
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
-// - /node_modules/ufo/dist/index.mjs ($id_614de060)
+// - /node_modules/vue-router/dist/vue-router.cjs.js ($id_f9a4a698)
 // - /node_modules/h3/dist/index.mjs ($id_57d7ded6)
+// - /node_modules/ufo/dist/index.mjs ($id_614de060)
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
-// - /node_modules/nuxt/dist/app/nuxt.mjs ($id_e069d411)
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs ($id_c194d63d)
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/router.options.mjs ($id_84745e83)
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/middleware.mjs ($id_6df1d5ed)
 // --------------------
-const $id_7fe121f6 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const $id_a090977b = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/ufo/dist/index.mjs");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue-router/dist/vue-router.cjs.js");
 
 const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/h3/dist/index.mjs");
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/ufo/dist/index.mjs");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/nuxt.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/page.mjs");
 
 const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-function getRouteFromPath(fullPath) {
-  if (typeof fullPath === "object") {
-    throw new TypeError("[nuxt] Route location object cannot be resolved when vue-router is disabled (no pages).");
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs");
+
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/router.options.mjs");
+
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/middleware.mjs");
+
+function createCurrentLocation(base, location) {
+  const { pathname, search, hash } = location;
+  const hashPos = base.indexOf("#");
+  if (hashPos > -1) {
+    const slicePos = hash.includes(base.slice(hashPos)) ? base.slice(hashPos).length : 1;
+    let pathFromHash = hash.slice(slicePos);
+    if (pathFromHash[0] !== "/") {
+      pathFromHash = "/" + pathFromHash;
+    }
+    return __vite_ssr_import_3__.withoutBase(pathFromHash, "");
   }
-  const url = __vite_ssr_import_1__.parseURL(fullPath.toString());
-  return {
-    path: url.pathname,
-    fullPath,
-    query: __vite_ssr_import_1__.parseQuery(url.search),
-    hash: url.hash,
-    params: {},
-    name: void 0,
-    matched: [],
-    redirectedFrom: void 0,
-    meta: {},
-    href: fullPath
-  };
+  const path = __vite_ssr_import_3__.withoutBase(pathname, base);
+  return path + search + hash;
 }
-__vite_ssr_exports__.default = __vite_ssr_import_3__.defineNuxtPlugin((nuxtApp) => {
-  const initialURL = false ? __vite_ssr_import_1__.withoutBase(window.location.pathname, __vite_ssr_import_5__.useRuntimeConfig().app.baseURL) + window.location.search + window.location.hash : nuxtApp.ssrContext.url;
-  const routes = [];
-  const hooks = {
-    "navigate:before": [],
-    "resolve:before": [],
-    "navigate:after": [],
-    error: []
-  };
-  const registerHook = (hook, guard) => {
-    hooks[hook].push(guard);
-    return () => hooks[hook].splice(hooks[hook].indexOf(guard), 1);
-  };
+__vite_ssr_exports__.default = __vite_ssr_import_5__.defineNuxtPlugin(async (nuxtApp) => {
+  nuxtApp.vueApp.component("NuxtPage", __vite_ssr_import_4__.default);
+  nuxtApp.vueApp.component("NuxtNestedPage", __vite_ssr_import_4__.default);
+  nuxtApp.vueApp.component("NuxtChild", __vite_ssr_import_4__.default);
   const baseURL = __vite_ssr_import_5__.useRuntimeConfig().app.baseURL;
-  const route = __vite_ssr_import_0__.reactive(getRouteFromPath(initialURL));
-  async function handleNavigation(url, replace) {
-    try {
-      const to = getRouteFromPath(url);
-      for (const middleware of hooks["navigate:before"]) {
-        const result = await middleware(to, route);
-        if (result === false || result instanceof Error) {
-          return;
-        }
-        if (result) {
-          return handleNavigation(result, true);
-        }
-      }
-      for (const handler of hooks["resolve:before"]) {
-        await handler(to, route);
-      }
-      Object.assign(route, to);
-      if (false) {
-        window.history[replace ? "replaceState" : "pushState"]({}, "", __vite_ssr_import_1__.joinURL(baseURL, url));
-        if (!nuxtApp.isHydrating) {
-          await __vite_ssr_import_4__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.clearError);
-        }
-      }
-      for (const middleware of hooks["navigate:after"]) {
-        await middleware(to, route);
-      }
-    } catch (err) {
-      if (true && !hooks.error.length) {
-        console.warn("No error handlers registered to handle middleware errors. You can register an error handler with `router.onError()`", err);
-      }
-      for (const handler of hooks.error) {
-        await handler(err);
-      }
-    }
-  }
-  const router = {
-    currentRoute: route,
-    isReady: () => Promise.resolve(),
-    options: {},
-    install: () => Promise.resolve(),
-    push: (url) => handleNavigation(url, false),
-    replace: (url) => handleNavigation(url, true),
-    back: () => window.history.go(-1),
-    go: (delta) => window.history.go(delta),
-    forward: () => window.history.go(1),
-    beforeResolve: (guard) => registerHook("resolve:before", guard),
-    beforeEach: (guard) => registerHook("navigate:before", guard),
-    afterEach: (guard) => registerHook("navigate:after", guard),
-    onError: (handler) => registerHook("error", handler),
-    resolve: getRouteFromPath,
-    addRoute: (parentName, route2) => {
-      routes.push(route2);
-    },
-    getRoutes: () => routes,
-    hasRoute: (name) => routes.some((route2) => route2.name === name),
-    removeRoute: (name) => {
-      const index = routes.findIndex((route2) => route2.name === name);
-      if (index !== -1) {
-        routes.splice(index, 1);
-      }
-    }
-  };
-  nuxtApp.vueApp.component("RouterLink", {
-    functional: true,
-    props: { to: String },
-    setup: (props, { slots }) => () => __vite_ssr_import_0__.h("a", { href: props.to, onClick: (e) => {
-      e.preventDefault();
-      router.push(props.to);
-    } }, slots)
+  const routerHistory = false ? __vite_ssr_import_1__.createWebHistory(baseURL) : __vite_ssr_import_1__.createMemoryHistory(baseURL);
+  const initialURL = true ? nuxtApp.ssrContext.url : createCurrentLocation(baseURL, window.location);
+  const router = __vite_ssr_import_1__.createRouter({
+    ...__vite_ssr_import_7__.default,
+    history: routerHistory,
+    routes: __vite_ssr_import_6__.default
   });
-  if (false) {
-    window.addEventListener("popstate", (event) => {
-      const location = event.target.location;
-      router.replace(location.href.replace(location.origin, ""));
-    });
+  nuxtApp.vueApp.use(router);
+  const previousRoute = __vite_ssr_import_0__.shallowRef(router.currentRoute.value);
+  router.afterEach((_to, from) => {
+    previousRoute.value = from;
+  });
+  Object.defineProperty(nuxtApp.vueApp.config.globalProperties, "previousRoute", {
+    get: () => previousRoute.value
+  });
+  const route = {};
+  for (const key in router.currentRoute.value) {
+    route[key] = __vite_ssr_import_0__.computed(() => router.currentRoute.value[key]);
   }
-  nuxtApp._route = route;
+  const _activeRoute = __vite_ssr_import_0__.shallowRef(router.resolve(initialURL));
+  const syncCurrentRoute = () => {
+    _activeRoute.value = router.currentRoute.value;
+  };
+  nuxtApp.hook("page:finish", syncCurrentRoute);
+  router.afterEach((to, from) => {
+    if (to.matched[0]?.components?.default === from.matched[0]?.components?.default) {
+      syncCurrentRoute();
+    }
+  });
+  const activeRoute = {};
+  for (const key in _activeRoute.value) {
+    activeRoute[key] = __vite_ssr_import_0__.computed(() => _activeRoute.value[key]);
+  }
+  nuxtApp._route = __vite_ssr_import_0__.reactive(route);
+  nuxtApp._activeRoute = __vite_ssr_import_0__.reactive(activeRoute);
   nuxtApp._middleware = nuxtApp._middleware || {
     global: [],
     named: {}
   };
-  nuxtApp.hooks.hookOnce("app:created", async () => {
-    router.beforeEach(async (to, from) => {
-      to.meta = __vite_ssr_import_0__.reactive(to.meta || {});
-      nuxtApp._processingMiddleware = true;
-      const middlewareEntries = new Set(nuxtApp._middleware.global);
-      for (const middleware of middlewareEntries) {
-        const result = await __vite_ssr_import_4__.callWithNuxt(nuxtApp, middleware, [to, from]);
-        if (true) {
-          if (result === false || result instanceof Error) {
-            const error = result || __vite_ssr_import_2__.createError({
-              statusMessage: `Route navigation aborted: ${initialURL}`
-            });
-            return __vite_ssr_import_4__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.throwError, [error]);
-          }
+  const error = __vite_ssr_import_5__.useError();
+  try {
+    if (true) {
+      await router.push(initialURL);
+    }
+    await router.isReady();
+  } catch (error2) {
+    __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.throwError, [error2]);
+  }
+  router.beforeEach(async (to, from) => {
+    to.meta = __vite_ssr_import_0__.reactive(to.meta);
+    nuxtApp._processingMiddleware = true;
+    const middlewareEntries = new Set([...__vite_ssr_import_8__.globalMiddleware, ...nuxtApp._middleware.global]);
+    for (const component of to.matched) {
+      const componentMiddleware = component.meta.middleware;
+      if (!componentMiddleware) {
+        continue;
+      }
+      if (Array.isArray(componentMiddleware)) {
+        for (const entry of componentMiddleware) {
+          middlewareEntries.add(entry);
         }
-        if (result || result === false) {
-          return result;
+      } else {
+        middlewareEntries.add(componentMiddleware);
+      }
+    }
+    for (const entry of middlewareEntries) {
+      const middleware = typeof entry === "string" ? nuxtApp._middleware.named[entry] || await __vite_ssr_import_8__.namedMiddleware[entry]?.().then((r) => r.default || r) : entry;
+      if (!middleware) {
+        if (true) {
+          throw new Error(`Unknown route middleware: '${entry}'. Valid middleware: ${Object.keys(__vite_ssr_import_8__.namedMiddleware).map((mw) => `'${mw}'`).join(", ")}.`);
+        }
+        throw new Error(`Unknown route middleware: '${entry}'.`);
+      }
+      const result = await __vite_ssr_import_5__.callWithNuxt(nuxtApp, middleware, [to, from]);
+      if (true) {
+        if (result === false || result instanceof Error) {
+          const error2 = result || __vite_ssr_import_2__.createError({
+            statusMessage: `Route navigation aborted: ${initialURL}`
+          });
+          return __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.throwError, [error2]);
         }
       }
-    });
-    router.afterEach(() => {
-      delete nuxtApp._processingMiddleware;
-    });
-    await router.replace(initialURL);
-    if (!__vite_ssr_import_1__.isEqual(route.fullPath, initialURL)) {
-      await __vite_ssr_import_4__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.navigateTo, [route.fullPath]);
+      if (result || result === false) {
+        return result;
+      }
     }
   });
-  return {
-    provide: {
-      route,
-      router
+  router.afterEach(async (to) => {
+    delete nuxtApp._processingMiddleware;
+    if (false && !nuxtApp.isHydrating && error.value) {
+      await __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.clearError);
     }
-  };
+    if (to.matched.length === 0) {
+      __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.throwError, [__vite_ssr_import_2__.createError({
+        statusCode: 404,
+        statusMessage: `Page not found: ${to.fullPath}`
+      })]);
+    } else if (true && to.matched[0].name === "404" && nuxtApp.ssrContext) {
+      nuxtApp.ssrContext.res.statusCode = 404;
+    } else if (true) {
+      const currentURL = to.fullPath || "/";
+      if (!__vite_ssr_import_3__.isEqual(currentURL, initialURL)) {
+        await __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.navigateTo, [currentURL]);
+      }
+    }
+  });
+  nuxtApp.hooks.hookOnce("app:created", async () => {
+    try {
+      await router.replace({
+        ...router.resolve(initialURL),
+        name: void 0,
+        force: true
+      });
+    } catch (error2) {
+      __vite_ssr_import_5__.callWithNuxt(nuxtApp, __vite_ssr_import_5__.throwError, [error2]);
+    }
+  });
+  return { provide: { router } };
 });
 ;
+}
+
+
+// --------------------
+// Request: /node_modules/nuxt/dist/pages/runtime/page.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// Dependencies: 
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/vue-router/dist/vue-router.cjs.js ($id_f9a4a698)
+// - /node_modules/nuxt/dist/pages/runtime/utils.mjs ($id_80f433aa)
+// - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
+// - /node_modules/nuxt/dist/app/components/utils.mjs ($id_69c52686)
+// --------------------
+const $id_5fc14cdc = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue-router/dist/vue-router.cjs.js");
+
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/utils.mjs");
+
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
+
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/components/utils.mjs");
+
+const isNestedKey = Symbol("isNested");
+__vite_ssr_exports__.default = __vite_ssr_import_0__.defineComponent({
+  name: "NuxtPage",
+  inheritAttrs: false,
+  props: {
+    name: {
+      type: String
+    },
+    route: {
+      type: Object
+    },
+    pageKey: {
+      type: [Function, String],
+      default: null
+    }
+  },
+  setup(props, { attrs }) {
+    const nuxtApp = __vite_ssr_import_3__.useNuxtApp();
+    const isNested = __vite_ssr_import_0__.inject(isNestedKey, false);
+    __vite_ssr_import_0__.provide(isNestedKey, true);
+    return () => {
+      return __vite_ssr_import_0__.h(__vite_ssr_import_1__.RouterView, { name: props.name, route: props.route, ...attrs }, {
+        default: (routeProps) => routeProps.Component && __vite_ssr_import_4__._wrapIf(__vite_ssr_import_0__.Transition, routeProps.route.meta.pageTransition ?? defaultPageTransition, __vite_ssr_import_2__.wrapInKeepAlive(routeProps.route.meta.keepalive, isNested && nuxtApp.isHydrating ? __vite_ssr_import_0__.h(routeProps.Component, { key: __vite_ssr_import_2__.generateRouteKey(props.pageKey, routeProps) }) : __vite_ssr_import_0__.h(__vite_ssr_import_0__.Suspense, {
+          onPending: () => nuxtApp.callHook("page:start", routeProps.Component),
+          onResolve: () => nuxtApp.callHook("page:finish", routeProps.Component)
+        }, { default: () => __vite_ssr_import_0__.h(routeProps.Component, { key: __vite_ssr_import_2__.generateRouteKey(props.pageKey, routeProps) }) }))).default()
+      });
+    };
+  }
+});
+const defaultPageTransition = { name: "page", mode: "out-in" };
+;
+}
+
+
+// --------------------
+// Request: /node_modules/nuxt/dist/pages/runtime/utils.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
+// Dependencies: 
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// --------------------
+const $id_80f433aa = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const interpolatePath = (route, match) => {
+  return match.path.replace(/(:\w+)\([^)]+\)/g, "$1").replace(/(:\w+)[?+*]/g, "$1").replace(/:\w+/g, (r) => route.params[r.slice(1)]?.toString() || "");
+};
+const generateRouteKey = (override, routeProps) => {
+  const matchedRoute = routeProps.route.matched.find((m) => m.components.default === routeProps.Component.type);
+  const source = override ?? matchedRoute?.meta.key ?? interpolatePath(routeProps.route, matchedRoute);
+  return typeof source === "function" ? source(routeProps.route) : source;
+};
+Object.defineProperty(__vite_ssr_exports__, "generateRouteKey", { enumerable: true, configurable: true, get(){ return generateRouteKey }});
+const wrapInKeepAlive = (props, children) => {
+  return { default: () => false && props ? __vite_ssr_import_0__.h(__vite_ssr_import_0__.KeepAlive, props === true ? {} : props, children) : children };
+};
+Object.defineProperty(__vite_ssr_exports__, "wrapInKeepAlive", { enumerable: true, configurable: true, get(){ return wrapInKeepAlive }});
+;
+}
+
+
+// --------------------
+// Request: /node_modules/nuxt/dist/app/components/utils.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/page.mjs ($id_5fc14cdc)
+// Dependencies: 
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// --------------------
+const $id_69c52686 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const Fragment = {
+  setup(_props, { slots }) {
+    return () => slots.default?.();
+  }
+};
+const _wrapIf = (component, props, slots) => {
+  return { default: () => props ? __vite_ssr_import_0__.h(component, props === true ? {} : props, slots) : __vite_ssr_import_0__.h(Fragment, {}, slots) };
+};
+Object.defineProperty(__vite_ssr_exports__, "_wrapIf", { enumerable: true, configurable: true, get(){ return _wrapIf }});
+;
+}
+
+
+// --------------------
+// Request: /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// Dependencies: 
+// - /pages/index.vue?macro=true ($id_5dd70240)
+// - /pages/index.vue ($id_cca58e97)
+// --------------------
+const $id_c194d63d = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/pages/index.vue?macro=true");
+
+__vite_ssr_exports__.default = [
+  {
+    name: "index",
+    path: "/",
+    file: "/home/petr/Documents/meteostanice-web/pages/index.vue",
+    children: [],
+    meta: __vite_ssr_import_0__.meta,
+    alias: __vite_ssr_import_0__.meta?.alias || [],
+    component: () => __vite_ssr_dynamic_import__('/pages/index.vue')
+  }
+];
+}
+
+
+// --------------------
+// Request: /pages/index.vue?macro=true
+// Parents: 
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs ($id_c194d63d)
+// Dependencies: 
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /@id/plugin-vue:export-helper ($id_bbb863c1)
+// --------------------
+const $id_5dd70240 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+
+const _sfc_main = {
+  name: "index"
+}
+
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+
+
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}></div>`)
+}
+
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = __vite_ssr_import_1__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/petr/Documents/meteostanice-web/pages/index.vue"]])
+const meta = undefined
+Object.defineProperty(__vite_ssr_exports__, "meta", { enumerable: true, configurable: true, get(){ return meta }});;
+}
+
+
+// --------------------
+// Request: /node_modules/vue/server-renderer/index.js
+// Parents: 
+// - /pages/index.vue?macro=true ($id_5dd70240)
+// - /pages/index.vue ($id_cca58e97)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
+// - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
+// - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
+// - /components/Header.vue ($id_4e284fc3)
+// - /app.vue ($id_2b46e842)
+// Dependencies: 
+
+// --------------------
+const $id_b215fa1c = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
+import("file:///home/petr/Documents/meteostanice-web/node_modules/vue/server-renderer/index.js")
+  .then(r => {
+    if (r.default && r.default.__esModule)
+      r = r.default
+    exports.default = r.default
+    ssrExportAll(r)
+  })
+  .catch(e => {
+    console.error(e)
+    throw new Error("[vite dev] Error loading external \"/home/petr/Documents/meteostanice-web/node_modules/vue/server-renderer/index.js\".")
+  })
+
+
+// --------------------
+// Request: /@id/plugin-vue:export-helper
+// Parents: 
+// - /pages/index.vue?macro=true ($id_5dd70240)
+// - /pages/index.vue ($id_cca58e97)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
+// - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
+// - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
+// - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
+// - /components/Header.vue ($id_4e284fc3)
+// - /app.vue ($id_2b46e842)
+// Dependencies: 
+
+// --------------------
+const $id_bbb863c1 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+
+__vite_ssr_exports__.default = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+}
+;
+}
+
+
+// --------------------
+// Request: /pages/index.vue
+// Parents: 
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs ($id_c194d63d)
+// Dependencies: 
+// - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
+// - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /@id/plugin-vue:export-helper ($id_bbb863c1)
+// --------------------
+const $id_cca58e97 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+
+const _sfc_main = {
+  name: "index"
+}
+
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+
+
+function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
+  _push(`<div${__vite_ssr_import_0__.ssrRenderAttrs(_attrs)}></div>`)
+}
+
+
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+const _sfc_setup = _sfc_main.setup
+_sfc_main.setup = (props, ctx) => {
+  const ssrContext = __vite_ssr_import_1__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("pages/index.vue")
+  return _sfc_setup ? _sfc_setup(props, ctx) : undefined
+}
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_2__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/petr/Documents/meteostanice-web/pages/index.vue"]]);
+}
+
+
+// --------------------
+// Request: /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/router.options.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// Dependencies: 
+
+// --------------------
+const $id_84745e83 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const configRouterOptions = {}
+__vite_ssr_exports__.default = {
+...configRouterOptions,
+};
+}
+
+
+// --------------------
+// Request: /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/middleware.mjs
+// Parents: 
+// - /node_modules/nuxt/dist/pages/runtime/router.mjs ($id_a090977b)
+// Dependencies: 
+
+// --------------------
+const $id_6df1d5ed = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const globalMiddleware = []
+Object.defineProperty(__vite_ssr_exports__, "globalMiddleware", { enumerable: true, configurable: true, get(){ return globalMiddleware }});
+const namedMiddleware = {}
+Object.defineProperty(__vite_ssr_exports__, "namedMiddleware", { enumerable: true, configurable: true, get(){ return namedMiddleware }});;
 }
 
 
@@ -2922,12 +3224,12 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_6__.default(_sfc_m
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
 // - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
 // Dependencies: 
 // - /node_modules/nuxt/dist/head/runtime/index.mjs ($id_b7351483)
 // - /node_modules/nuxt/dist/app/compat/vue-demi.mjs ($id_a8110be7)
 // - /node_modules/nuxt/dist/app/index.mjs ($id_36927477)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
+// - /node_modules/nuxt/dist/pages/runtime/composables.mjs ($id_ff6ed455)
 // --------------------
 const $id_780fb80c = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
@@ -2938,99 +3240,104 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/nuxt/dist
 
 const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
+const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/composables.mjs");
 
-Object.defineProperty(__vite_ssr_exports__, "useHead", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_4__.useHead }});
-Object.defineProperty(__vite_ssr_exports__, "useMeta", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_4__.useMeta }});
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/compat/vue-demi.mjs");
+const __vite_ssr_import_5__ = await __vite_ssr_import__("/node_modules/nuxt/dist/head/runtime/index.mjs");
 
-Object.defineProperty(__vite_ssr_exports__, "isVue2", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_5__.isVue2 }});
-Object.defineProperty(__vite_ssr_exports__, "isVue3", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_5__.isVue3 }});
-const __vite_ssr_import_6__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
+Object.defineProperty(__vite_ssr_exports__, "useHead", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_5__.useHead }});
+Object.defineProperty(__vite_ssr_exports__, "useMeta", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_5__.useMeta }});
+const __vite_ssr_import_6__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/compat/vue-demi.mjs");
 
-Object.defineProperty(__vite_ssr_exports__, "useAsyncData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useAsyncData }});
-Object.defineProperty(__vite_ssr_exports__, "useLazyAsyncData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useLazyAsyncData }});
-Object.defineProperty(__vite_ssr_exports__, "refreshNuxtData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.refreshNuxtData }});
-Object.defineProperty(__vite_ssr_exports__, "defineNuxtComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.defineNuxtComponent }});
-Object.defineProperty(__vite_ssr_exports__, "useNuxtApp", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useNuxtApp }});
-Object.defineProperty(__vite_ssr_exports__, "defineNuxtPlugin", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.defineNuxtPlugin }});
-Object.defineProperty(__vite_ssr_exports__, "useRuntimeConfig", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useRuntimeConfig }});
-Object.defineProperty(__vite_ssr_exports__, "useState", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useState }});
-Object.defineProperty(__vite_ssr_exports__, "useFetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useFetch }});
-Object.defineProperty(__vite_ssr_exports__, "useLazyFetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useLazyFetch }});
-Object.defineProperty(__vite_ssr_exports__, "useCookie", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useCookie }});
-Object.defineProperty(__vite_ssr_exports__, "useRequestHeaders", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useRequestHeaders }});
-Object.defineProperty(__vite_ssr_exports__, "useRequestEvent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useRequestEvent }});
-Object.defineProperty(__vite_ssr_exports__, "useRouter", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useRouter }});
-Object.defineProperty(__vite_ssr_exports__, "useRoute", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useRoute }});
-Object.defineProperty(__vite_ssr_exports__, "useActiveRoute", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useActiveRoute }});
-Object.defineProperty(__vite_ssr_exports__, "defineNuxtRouteMiddleware", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.defineNuxtRouteMiddleware }});
-Object.defineProperty(__vite_ssr_exports__, "navigateTo", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.navigateTo }});
-Object.defineProperty(__vite_ssr_exports__, "abortNavigation", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.abortNavigation }});
-Object.defineProperty(__vite_ssr_exports__, "addRouteMiddleware", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.addRouteMiddleware }});
-Object.defineProperty(__vite_ssr_exports__, "throwError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.throwError }});
-Object.defineProperty(__vite_ssr_exports__, "clearError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.clearError }});
-Object.defineProperty(__vite_ssr_exports__, "useError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.useError }});
-Object.defineProperty(__vite_ssr_exports__, "defineNuxtLink", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.defineNuxtLink }});
-const __vite_ssr_import_7__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+Object.defineProperty(__vite_ssr_exports__, "isVue2", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.isVue2 }});
+Object.defineProperty(__vite_ssr_exports__, "isVue3", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_6__.isVue3 }});
+const __vite_ssr_import_7__ = await __vite_ssr_import__("/node_modules/nuxt/dist/app/index.mjs");
 
-Object.defineProperty(__vite_ssr_exports__, "withCtx", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withCtx }});
-Object.defineProperty(__vite_ssr_exports__, "withDirectives", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withDirectives }});
-Object.defineProperty(__vite_ssr_exports__, "withKeys", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withKeys }});
-Object.defineProperty(__vite_ssr_exports__, "withMemo", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withMemo }});
-Object.defineProperty(__vite_ssr_exports__, "withModifiers", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withModifiers }});
-Object.defineProperty(__vite_ssr_exports__, "withScopeId", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.withScopeId }});
-Object.defineProperty(__vite_ssr_exports__, "onActivated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onActivated }});
-Object.defineProperty(__vite_ssr_exports__, "onBeforeMount", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onBeforeMount }});
-Object.defineProperty(__vite_ssr_exports__, "onBeforeUnmount", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onBeforeUnmount }});
-Object.defineProperty(__vite_ssr_exports__, "onBeforeUpdate", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onBeforeUpdate }});
-Object.defineProperty(__vite_ssr_exports__, "onDeactivated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onDeactivated }});
-Object.defineProperty(__vite_ssr_exports__, "onErrorCaptured", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onErrorCaptured }});
-Object.defineProperty(__vite_ssr_exports__, "onMounted", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onMounted }});
-Object.defineProperty(__vite_ssr_exports__, "onRenderTracked", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onRenderTracked }});
-Object.defineProperty(__vite_ssr_exports__, "onRenderTriggered", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onRenderTriggered }});
-Object.defineProperty(__vite_ssr_exports__, "onServerPrefetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onServerPrefetch }});
-Object.defineProperty(__vite_ssr_exports__, "onUnmounted", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onUnmounted }});
-Object.defineProperty(__vite_ssr_exports__, "onUpdated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onUpdated }});
-Object.defineProperty(__vite_ssr_exports__, "computed", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.computed }});
-Object.defineProperty(__vite_ssr_exports__, "customRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.customRef }});
-Object.defineProperty(__vite_ssr_exports__, "isProxy", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.isProxy }});
-Object.defineProperty(__vite_ssr_exports__, "isReactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.isReactive }});
-Object.defineProperty(__vite_ssr_exports__, "isReadonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.isReadonly }});
-Object.defineProperty(__vite_ssr_exports__, "isRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.isRef }});
-Object.defineProperty(__vite_ssr_exports__, "markRaw", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.markRaw }});
-Object.defineProperty(__vite_ssr_exports__, "proxyRefs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.proxyRefs }});
-Object.defineProperty(__vite_ssr_exports__, "reactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.reactive }});
-Object.defineProperty(__vite_ssr_exports__, "readonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.readonly }});
-Object.defineProperty(__vite_ssr_exports__, "ref", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.ref }});
-Object.defineProperty(__vite_ssr_exports__, "shallowReactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.shallowReactive }});
-Object.defineProperty(__vite_ssr_exports__, "shallowReadonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.shallowReadonly }});
-Object.defineProperty(__vite_ssr_exports__, "shallowRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.shallowRef }});
-Object.defineProperty(__vite_ssr_exports__, "toRaw", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.toRaw }});
-Object.defineProperty(__vite_ssr_exports__, "toRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.toRef }});
-Object.defineProperty(__vite_ssr_exports__, "toRefs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.toRefs }});
-Object.defineProperty(__vite_ssr_exports__, "triggerRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.triggerRef }});
-Object.defineProperty(__vite_ssr_exports__, "unref", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.unref }});
-Object.defineProperty(__vite_ssr_exports__, "watch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.watch }});
-Object.defineProperty(__vite_ssr_exports__, "watchEffect", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.watchEffect }});
-Object.defineProperty(__vite_ssr_exports__, "isShallow", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.isShallow }});
-Object.defineProperty(__vite_ssr_exports__, "effect", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.effect }});
-Object.defineProperty(__vite_ssr_exports__, "effectScope", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.effectScope }});
-Object.defineProperty(__vite_ssr_exports__, "getCurrentScope", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.getCurrentScope }});
-Object.defineProperty(__vite_ssr_exports__, "onScopeDispose", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.onScopeDispose }});
-Object.defineProperty(__vite_ssr_exports__, "defineComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineComponent }});
-Object.defineProperty(__vite_ssr_exports__, "defineAsyncComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineAsyncComponent }});
-Object.defineProperty(__vite_ssr_exports__, "resolveComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.resolveComponent }});
-Object.defineProperty(__vite_ssr_exports__, "getCurrentInstance", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.getCurrentInstance }});
-Object.defineProperty(__vite_ssr_exports__, "h", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.h }});
-Object.defineProperty(__vite_ssr_exports__, "inject", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.inject }});
-Object.defineProperty(__vite_ssr_exports__, "nextTick", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.nextTick }});
-Object.defineProperty(__vite_ssr_exports__, "provide", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.provide }});
-Object.defineProperty(__vite_ssr_exports__, "useAttrs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useAttrs }});
-Object.defineProperty(__vite_ssr_exports__, "useCssModule", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useCssModule }});
-Object.defineProperty(__vite_ssr_exports__, "useCssVars", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useCssVars }});
-Object.defineProperty(__vite_ssr_exports__, "useSlots", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useSlots }});
-Object.defineProperty(__vite_ssr_exports__, "useTransitionState", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useTransitionState }});;
+Object.defineProperty(__vite_ssr_exports__, "useAsyncData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useAsyncData }});
+Object.defineProperty(__vite_ssr_exports__, "useLazyAsyncData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useLazyAsyncData }});
+Object.defineProperty(__vite_ssr_exports__, "refreshNuxtData", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.refreshNuxtData }});
+Object.defineProperty(__vite_ssr_exports__, "defineNuxtComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineNuxtComponent }});
+Object.defineProperty(__vite_ssr_exports__, "useNuxtApp", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useNuxtApp }});
+Object.defineProperty(__vite_ssr_exports__, "defineNuxtPlugin", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineNuxtPlugin }});
+Object.defineProperty(__vite_ssr_exports__, "useRuntimeConfig", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useRuntimeConfig }});
+Object.defineProperty(__vite_ssr_exports__, "useState", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useState }});
+Object.defineProperty(__vite_ssr_exports__, "useFetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useFetch }});
+Object.defineProperty(__vite_ssr_exports__, "useLazyFetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useLazyFetch }});
+Object.defineProperty(__vite_ssr_exports__, "useCookie", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useCookie }});
+Object.defineProperty(__vite_ssr_exports__, "useRequestHeaders", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useRequestHeaders }});
+Object.defineProperty(__vite_ssr_exports__, "useRequestEvent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useRequestEvent }});
+Object.defineProperty(__vite_ssr_exports__, "useRouter", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useRouter }});
+Object.defineProperty(__vite_ssr_exports__, "useRoute", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useRoute }});
+Object.defineProperty(__vite_ssr_exports__, "useActiveRoute", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useActiveRoute }});
+Object.defineProperty(__vite_ssr_exports__, "defineNuxtRouteMiddleware", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineNuxtRouteMiddleware }});
+Object.defineProperty(__vite_ssr_exports__, "navigateTo", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.navigateTo }});
+Object.defineProperty(__vite_ssr_exports__, "abortNavigation", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.abortNavigation }});
+Object.defineProperty(__vite_ssr_exports__, "addRouteMiddleware", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.addRouteMiddleware }});
+Object.defineProperty(__vite_ssr_exports__, "throwError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.throwError }});
+Object.defineProperty(__vite_ssr_exports__, "clearError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.clearError }});
+Object.defineProperty(__vite_ssr_exports__, "useError", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.useError }});
+Object.defineProperty(__vite_ssr_exports__, "defineNuxtLink", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_7__.defineNuxtLink }});
+const __vite_ssr_import_8__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+
+Object.defineProperty(__vite_ssr_exports__, "withCtx", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withCtx }});
+Object.defineProperty(__vite_ssr_exports__, "withDirectives", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withDirectives }});
+Object.defineProperty(__vite_ssr_exports__, "withKeys", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withKeys }});
+Object.defineProperty(__vite_ssr_exports__, "withMemo", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withMemo }});
+Object.defineProperty(__vite_ssr_exports__, "withModifiers", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withModifiers }});
+Object.defineProperty(__vite_ssr_exports__, "withScopeId", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.withScopeId }});
+Object.defineProperty(__vite_ssr_exports__, "onActivated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onActivated }});
+Object.defineProperty(__vite_ssr_exports__, "onBeforeMount", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onBeforeMount }});
+Object.defineProperty(__vite_ssr_exports__, "onBeforeUnmount", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onBeforeUnmount }});
+Object.defineProperty(__vite_ssr_exports__, "onBeforeUpdate", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onBeforeUpdate }});
+Object.defineProperty(__vite_ssr_exports__, "onDeactivated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onDeactivated }});
+Object.defineProperty(__vite_ssr_exports__, "onErrorCaptured", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onErrorCaptured }});
+Object.defineProperty(__vite_ssr_exports__, "onMounted", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onMounted }});
+Object.defineProperty(__vite_ssr_exports__, "onRenderTracked", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onRenderTracked }});
+Object.defineProperty(__vite_ssr_exports__, "onRenderTriggered", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onRenderTriggered }});
+Object.defineProperty(__vite_ssr_exports__, "onServerPrefetch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onServerPrefetch }});
+Object.defineProperty(__vite_ssr_exports__, "onUnmounted", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onUnmounted }});
+Object.defineProperty(__vite_ssr_exports__, "onUpdated", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onUpdated }});
+Object.defineProperty(__vite_ssr_exports__, "computed", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.computed }});
+Object.defineProperty(__vite_ssr_exports__, "customRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.customRef }});
+Object.defineProperty(__vite_ssr_exports__, "isProxy", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.isProxy }});
+Object.defineProperty(__vite_ssr_exports__, "isReactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.isReactive }});
+Object.defineProperty(__vite_ssr_exports__, "isReadonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.isReadonly }});
+Object.defineProperty(__vite_ssr_exports__, "isRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.isRef }});
+Object.defineProperty(__vite_ssr_exports__, "markRaw", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.markRaw }});
+Object.defineProperty(__vite_ssr_exports__, "proxyRefs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.proxyRefs }});
+Object.defineProperty(__vite_ssr_exports__, "reactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.reactive }});
+Object.defineProperty(__vite_ssr_exports__, "readonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.readonly }});
+Object.defineProperty(__vite_ssr_exports__, "ref", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.ref }});
+Object.defineProperty(__vite_ssr_exports__, "shallowReactive", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.shallowReactive }});
+Object.defineProperty(__vite_ssr_exports__, "shallowReadonly", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.shallowReadonly }});
+Object.defineProperty(__vite_ssr_exports__, "shallowRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.shallowRef }});
+Object.defineProperty(__vite_ssr_exports__, "toRaw", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.toRaw }});
+Object.defineProperty(__vite_ssr_exports__, "toRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.toRef }});
+Object.defineProperty(__vite_ssr_exports__, "toRefs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.toRefs }});
+Object.defineProperty(__vite_ssr_exports__, "triggerRef", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.triggerRef }});
+Object.defineProperty(__vite_ssr_exports__, "unref", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.unref }});
+Object.defineProperty(__vite_ssr_exports__, "watch", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.watch }});
+Object.defineProperty(__vite_ssr_exports__, "watchEffect", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.watchEffect }});
+Object.defineProperty(__vite_ssr_exports__, "isShallow", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.isShallow }});
+Object.defineProperty(__vite_ssr_exports__, "effect", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.effect }});
+Object.defineProperty(__vite_ssr_exports__, "effectScope", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.effectScope }});
+Object.defineProperty(__vite_ssr_exports__, "getCurrentScope", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.getCurrentScope }});
+Object.defineProperty(__vite_ssr_exports__, "onScopeDispose", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.onScopeDispose }});
+Object.defineProperty(__vite_ssr_exports__, "defineComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.defineComponent }});
+Object.defineProperty(__vite_ssr_exports__, "defineAsyncComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.defineAsyncComponent }});
+Object.defineProperty(__vite_ssr_exports__, "resolveComponent", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.resolveComponent }});
+Object.defineProperty(__vite_ssr_exports__, "getCurrentInstance", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.getCurrentInstance }});
+Object.defineProperty(__vite_ssr_exports__, "h", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.h }});
+Object.defineProperty(__vite_ssr_exports__, "inject", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.inject }});
+Object.defineProperty(__vite_ssr_exports__, "nextTick", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.nextTick }});
+Object.defineProperty(__vite_ssr_exports__, "provide", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.provide }});
+Object.defineProperty(__vite_ssr_exports__, "useAttrs", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.useAttrs }});
+Object.defineProperty(__vite_ssr_exports__, "useCssModule", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.useCssModule }});
+Object.defineProperty(__vite_ssr_exports__, "useCssVars", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.useCssVars }});
+Object.defineProperty(__vite_ssr_exports__, "useSlots", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.useSlots }});
+Object.defineProperty(__vite_ssr_exports__, "useTransitionState", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_8__.useTransitionState }});
+const __vite_ssr_import_9__ = await __vite_ssr_import__("/node_modules/nuxt/dist/pages/runtime/composables.mjs");
+
+Object.defineProperty(__vite_ssr_exports__, "definePageMeta", { enumerable: true, configurable: true, get(){ return __vite_ssr_import_9__.definePageMeta }});;
 }
 
 
@@ -3090,30 +3397,22 @@ Object.defineProperty(__vite_ssr_exports__, "del", { enumerable: true, configura
 
 
 // --------------------
-// Request: /node_modules/vue/server-renderer/index.js
+// Request: /node_modules/nuxt/dist/pages/runtime/composables.mjs
 // Parents: 
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
-// - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
-// - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
-// - /app.vue ($id_2b46e842)
+// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs ($id_780fb80c)
 // Dependencies: 
 
 // --------------------
-const $id_b215fa1c = (global, module, _, exports, importMeta, ssrImport, ssrDynamicImport, ssrExportAll) =>
-import("file:///home/petr/Documents/meteostanice-web/node_modules/vue/server-renderer/index.js")
-  .then(r => {
-    if (r.default && r.default.__esModule)
-      r = r.default
-    exports.default = r.default
-    ssrExportAll(r)
-  })
-  .catch(e => {
-    console.error(e)
-    throw new Error("[vite dev] Error loading external \"/home/petr/Documents/meteostanice-web/node_modules/vue/server-renderer/index.js\".")
-  })
+const $id_ff6ed455 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
+const warnRuntimeUsage = (method) => console.warn(`${method}() is a compiler-hint helper that is only usable inside the script block of a single file component. Its arguments should be compiled away and passing it at runtime has no effect.`);
+const definePageMeta = (meta) => {
+  if (true) {
+    warnRuntimeUsage("definePageMeta");
+  }
+};
+Object.defineProperty(__vite_ssr_exports__, "definePageMeta", { enumerable: true, configurable: true, get(){ return definePageMeta }});
+;
+}
 
 
 // --------------------
@@ -3125,32 +3424,6 @@ import("file:///home/petr/Documents/meteostanice-web/node_modules/vue/server-ren
 // --------------------
 const $id_e68b6b38 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 __vite_ssr_exports__.default = ".bg-white[data-v-573335c0]{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.cursor-pointer[data-v-573335c0]{cursor:pointer}.flex[data-v-573335c0]{display:flex}.grid[data-v-573335c0]{display:-ms-grid;display:grid}.place-content-center[data-v-573335c0]{place-content:center}.items-center[data-v-573335c0]{align-items:center}.justify-center[data-v-573335c0]{justify-content:center}.font-sans[data-v-573335c0]{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",Segoe UI Symbol,\"Noto Color Emoji\"}.font-medium[data-v-573335c0]{font-weight:500}.font-light[data-v-573335c0]{font-weight:300}.text-8xl[data-v-573335c0]{font-size:6rem;line-height:1}.text-xl[data-v-573335c0]{font-size:1.25rem;line-height:1.75rem}.leading-tight[data-v-573335c0]{line-height:1.25}.mb-8[data-v-573335c0]{margin-bottom:2rem}.mb-16[data-v-573335c0]{margin-bottom:4rem}.max-w-520px[data-v-573335c0]{max-width:520px}.min-h-screen[data-v-573335c0]{min-height:100vh}.overflow-hidden[data-v-573335c0]{overflow:hidden}.px-8[data-v-573335c0]{padding-left:2rem;padding-right:2rem}.py-2[data-v-573335c0]{padding-bottom:.5rem;padding-top:.5rem}.px-4[data-v-573335c0]{padding-left:1rem;padding-right:1rem}.fixed[data-v-573335c0]{position:fixed}.left-0[data-v-573335c0]{left:0}.right-0[data-v-573335c0]{right:0}.text-center[data-v-573335c0]{text-align:center}.text-black[data-v-573335c0]{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased[data-v-573335c0]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-full[data-v-573335c0]{width:100%}.z-10[data-v-573335c0]{z-index:10}.z-20[data-v-573335c0]{z-index:20}@media (min-width:640px){.sm\\:text-4xl[data-v-573335c0]{font-size:2.25rem;line-height:2.5rem}.sm\\:text-xl[data-v-573335c0]{font-size:1.25rem;line-height:1.75rem}.sm\\:text-10xl[data-v-573335c0]{font-size:10rem;line-height:1}.sm\\:px-0[data-v-573335c0]{padding-left:0;padding-right:0}.sm\\:py-3[data-v-573335c0]{padding-bottom:.75rem;padding-top:.75rem}.sm\\:px-6[data-v-573335c0]{padding-left:1.5rem;padding-right:1.5rem}}@media (prefers-color-scheme:dark){.dark\\:bg-black[data-v-573335c0]{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:text-white[data-v-573335c0]{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}.spotlight[data-v-573335c0]{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);bottom:-30vh;filter:blur(20vh);height:40vh}.gradient-border[data-v-573335c0]{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:.5rem;position:relative}@media (prefers-color-scheme:light){.gradient-border[data-v-573335c0]{background-color:#ffffff4d}.gradient-border[data-v-573335c0]:before{background:linear-gradient(90deg,#e2e2e2,#e2e2e2 25%,#00dc82 50%,#36e4da 75%,#0047e1)}}@media (prefers-color-scheme:dark){.gradient-border[data-v-573335c0]{background-color:#1414144d}.gradient-border[data-v-573335c0]:before{background:linear-gradient(90deg,#303030,#303030 25%,#00dc82 50%,#36e4da 75%,#0047e1)}}.gradient-border[data-v-573335c0]:before{background-size:400% auto;border-radius:.5rem;bottom:0;content:\"\";left:0;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.5;padding:2px;position:absolute;right:0;top:0;transition:background-position .3s ease-in-out,opacity .2s ease-in-out;width:100%}.gradient-border[data-v-573335c0]:hover:before{background-position:-50% 0;opacity:1}";
-}
-
-
-// --------------------
-// Request: /@id/plugin-vue:export-helper
-// Parents: 
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-404.vue ($id_b90d4d0f)
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-500.vue ($id_14c8b574)
-// - /node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue ($id_bc2d74a1)
-// - /node_modules/nuxt/dist/app/components/nuxt-error-page.vue ($id_8cc6d73f)
-// - /node_modules/nuxt/dist/app/components/nuxt-root.vue ($id_e9bfada3)
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
-// - /app.vue ($id_2b46e842)
-// Dependencies: 
-
-// --------------------
-const $id_bbb863c1 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-
-__vite_ssr_exports__.default = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-}
-;
 }
 
 
@@ -3389,13 +3662,13 @@ Object.defineProperty(__vite_ssr_exports__, "default", { enumerable: true, confi
 // Parents: 
 // - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/app-component.mjs ($id_69e0800f)
 // Dependencies: 
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
+// - /components/Header.vue ($id_4e284fc3)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
 const $id_2b46e842 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/@nuxt/ui-templates/dist/templates/welcome.vue");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/components/Header.vue");
 
 const _sfc_main = {}
 const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
@@ -3404,10 +3677,12 @@ const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/serve
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs) {
-  const _component_NuxtWelcome = __vite_ssr_import_0__.default
+  const _component_Header = __vite_ssr_import_0__.default
+  const _component_NuxtPage = __vite_ssr_import_1__.resolveComponent("NuxtPage")
 
   _push(`<div${__vite_ssr_import_2__.ssrRenderAttrs(_attrs)}>`)
-  _push(__vite_ssr_import_2__.ssrRenderComponent(_component_NuxtWelcome, null, null, _parent))
+  _push(__vite_ssr_import_2__.ssrRenderComponent(_component_Header, null, null, _parent))
+  _push(__vite_ssr_import_2__.ssrRenderComponent(_component_NuxtPage, null, null, _parent))
   _push(`</div>`)
 }
 
@@ -3427,115 +3702,75 @@ __vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_4__.default(_sfc_m
 
 
 // --------------------
-// Request: /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue
+// Request: /components/Header.vue
 // Parents: 
 // - /app.vue ($id_2b46e842)
 // Dependencies: 
-// - /@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs ($id_780fb80c)
 // - /node_modules/vue/dist/vue.cjs.js ($id_60f0615f)
 // - /node_modules/vue/server-renderer/index.js ($id_b215fa1c)
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue?vue&type=style&index=0&scoped=true&lang.css ($id_738782c9)
 // - /@id/plugin-vue:export-helper ($id_bbb863c1)
 // --------------------
-const $id_c5e87b7e = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-const __vite_ssr_import_0__ = await __vite_ssr_import__("/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs");
-
+const $id_4e284fc3 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
 
 const _sfc_main = {
-  __name: 'welcome',
-  props: {
-  appName: {
-    type: String,
-    default: "Nuxt"
-  },
-  version: {
-    type: String,
-    default: ""
-  },
-  title: {
-    type: String,
-    default: "Welcome to Nuxt 3!"
-  },
-  readDocs: {
-    type: String,
-    default: "We highly recommend you take a look at the Nuxt documentation, whether you are new or have previous experience with the framework."
-  },
-  followTwitter: {
-    type: String,
-    default: "Follow the Nuxt Twitter account to get latest news about releases, new modules, tutorials and tips."
-  },
-  starGitHub: {
-    type: String,
-    default: "Nuxt is open source and the code is available on GitHub, feel free to star it, participate in discussions or dive into the source."
-  }
-},
-  setup(__props, { expose }) {
-  expose();
-
-const props = __props
-
-
-__vite_ssr_import_0__.useHead({
-  title: `${ props.title }`,
-  script: [],
-  style: [
-    {
-      children: `*,:before,:after{-webkit-box-sizing:border-box;box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}*{--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(14, 165, 233, .5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000}:root{-moz-tab-size:4;-o-tab-size:4;tab-size:4}a{color:inherit;text-decoration:inherit}body{margin:0;font-family:inherit;line-height:inherit}html{-webkit-text-size-adjust:100%;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";line-height:1.5}p,h4,h5{margin:0}h4,h5{font-size:inherit;font-weight:inherit}svg{display:block;vertical-align:middle}`
-    }
-  ]
-})
-
-const __returned__ = { props, useHead: __vite_ssr_import_0__.useHead }
-Object.defineProperty(__returned__, '__isScriptSetup', { enumerable: false, value: true })
-return __returned__
+  name: "Header"
 }
 
-}
-const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_0__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
-const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
+const __vite_ssr_import_1__ = await __vite_ssr_import__("/node_modules/vue/server-renderer/index.js");
 
 
 function _sfc_ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  _push(`<div${
-    __vite_ssr_import_2__.ssrRenderAttrs(__vite_ssr_import_1__.mergeProps({ class: "font-sans antialiased bg-white dark:bg-black text-black dark:text-white min-h-screen place-content-center flex flex-col items-center justify-center p-8 text-sm sm:text-base" }, _attrs))
-  } data-v-84dc3362><div class="grid grid-cols-3 gap-4 md:gap-8 max-w-5xl w-full z-20" data-v-84dc3362><div class="flex justify-between items-end col-span-3" data-v-84dc3362><a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="nuxt-logo" data-v-84dc3362><svg viewBox="0 0 221 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-40 text-black dark:text-white" data-v-84dc3362><g clip-path="url(#a)" data-v-84dc3362><path fill="currentColor" d="M82.5623 18.5705h7.3017l15.474 24.7415V18.5705h6.741v35.0576h-7.252L89.3025 28.938v24.6901h-6.7402V18.5705ZM142.207 53.628h-6.282v-3.916c-1.429 2.7559-4.339 4.3076-8.015 4.3076-5.822 0-9.603-4.1069-9.603-10.0175V28.3847h6.282v14.3251c0 3.4558 2.146 5.8592 5.362 5.8592 3.524 0 5.974-2.7044 5.974-6.4099V28.3847h6.282V53.628ZM164.064 53.2289l-6.026-8.4144-6.027 8.4144h-6.69l9.296-13.1723-8.58-12.0709h6.843l5.158 7.2641 5.106-7.2641h6.895l-8.632 12.0709 9.295 13.1723h-6.638ZM183.469 20.7726v7.6116h7.149v5.1593h-7.149v12.5311c0 .4208.17.8245.473 1.1223.303.2978.715.4654 1.144.4661h5.532v5.9547h-4.137c-5.617 0-9.293-3.2062-9.293-8.8109V33.5484h-5.056v-5.1642h3.172c1.479 0 2.34-.8639 2.34-2.2932v-5.3184h5.825Z" data-v-84dc3362></path><path fill-rule="evenodd" clip-rule="evenodd" d="M30.1185 11.5456c-1.8853-3.24168-6.5987-3.24169-8.484 0L1.08737 46.8747c-1.885324 3.2417.47133 7.2938 4.24199 7.2938H21.3695c-1.6112-1.4081-2.2079-3.8441-.9886-5.9341l15.5615-26.675-5.8239-10.0138Z" fill="#80EEC0" data-v-84dc3362></path><path d="M43.1374 19.2952c1.5603-2.6523 5.461-2.6523 7.0212 0l17.0045 28.9057c1.5603 2.6522-.39 5.9676-3.5106 5.9676h-34.009c-3.1206 0-5.0709-3.3154-3.5106-5.9676l17.0045-28.9057ZM209.174 53.8005H198.483c0-1.8514.067-3.4526 0-6.0213h10.641c1.868 0 3.353.1001 4.354-.934 1-1.0341 1.501-2.3351 1.501-3.9029 0-1.8347-.667-3.2191-2.002-4.1532-1.301-.9674-2.985-1.4511-5.054-1.4511h-2.601v-5.2539h2.652c1.701 0 3.119-.4003 4.253-1.2009 1.134-.8006 1.701-1.9849 1.701-3.5527 0-1.301-.434-2.3351-1.301-3.1023-.834-.8007-2.001-1.201-3.503-1.201-1.634 0-2.918.4837-3.853 1.4511-.9.9674-1.401 2.1517-1.501 3.5527h-6.254c.133-3.2358 1.251-5.7877 3.352-7.6558 2.135-1.868 4.887-2.8021 8.256-2.8021 2.402 0 4.42.4337 6.055 1.301 1.668.834 2.919 1.9515 3.753 3.3525.867 1.4011 1.301 2.9523 1.301 4.6536 0 1.9681-.551 3.636-1.651 5.0037-1.068 1.3344-2.402 2.235-4.004 2.7021 1.969.4003 3.57 1.3677 4.804 2.9022 1.234 1.5011 1.852 3.4025 1.852 5.7043 0 1.9347-.468 3.7028-1.402 5.304-.934 1.6012-2.301 2.8855-4.103 3.8529-1.768.9674-3.953 1.4511-6.555 1.4511Z" fill="#00DC82" data-v-84dc3362></path></g><defs data-v-84dc3362><clipPath id="a" data-v-84dc3362><path fill="#fff" d="M0 0h221v65H0z" data-v-84dc3362></path></clipPath></defs></svg></a><a href="https://github.com/nuxt/framework/releases/tag/{{ version }}" target="_blank" rel="noopener" class="flex justify-end pb-1 sm:pb-2" data-v-84dc3362>${
-    __vite_ssr_import_2__.ssrInterpolate($props.version)
-  }</a><div class="spotlight-wrapper" data-v-84dc3362><div class="fixed z-10 left-0 right-0 spotlight" data-v-84dc3362></div></div></div><div class="col-span-3 rounded p-4 flex flex-col gradient-border" data-v-84dc3362><div class="flex justify-between items-center mb-4" data-v-84dc3362><h4 class="font-medium text-2xl" data-v-84dc3362>Get Started</h4><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-84dc3362><path d="M29.4284 31.095C26.9278 33.5955 23.5364 35.0003 20.0001 35.0003C16.4637 35.0003 13.0723 33.5955 10.5717 31.095C8.07118 28.5944 6.66638 25.203 6.66638 21.6667C6.66638 18.1304 8.07118 14.7389 10.5717 12.2383C10.5717 12.2383 11.6667 15 15.0001 16.6667C15.0001 13.3333 15.8334 8.33333 19.9767 5C23.3334 8.33333 26.8167 9.62833 29.4267 12.2383C30.667 13.475 31.6506 14.9446 32.321 16.5626C32.9915 18.1806 33.3355 19.9152 33.3334 21.6667C33.3357 23.418 32.9919 25.1525 32.3218 26.7705C31.6516 28.3886 30.6683 29.8582 29.4284 31.095V31.095Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-84dc3362></path><path d="M16.465 26.8683C17.0456 27.4491 17.7604 27.878 18.5462 28.1169C19.3319 28.3559 20.1644 28.3976 20.9701 28.2385C21.7758 28.0793 22.5299 27.7241 23.1657 27.2043C23.8015 26.6845 24.2995 26.016 24.6157 25.2581C24.9318 24.5001 25.0564 23.6759 24.9784 22.8584C24.9004 22.0408 24.6222 21.2551 24.1684 20.5705C23.7146 19.886 23.0992 19.3238 22.3766 18.9336C21.6539 18.5434 20.8463 18.3373 20.025 18.3333L18.3333 23.3333H15C15 24.6133 15.4883 25.8933 16.465 26.8683Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-84dc3362></path></svg></div><p class="mb-2" data-v-84dc3362>Remove this welcome page by removing <a class="bg-gray-100 dark:bg-white/10 rounded font-mono p-1 font-bold" data-v-84dc3362>&lt;NuxtWelcome /&gt;</a> tag or creating an <a href="https://v3.nuxtjs.org/docs/directory-structure/app" target="_blank" rel="noopener" class="bg-gray-100 dark:bg-white/10 rounded font-mono p-1 font-bold" data-v-84dc3362>app.vue</a> file.</p></div><a href="https://v3.nuxtjs.org" target="_blank" rel="noopener" class="gradient-border cursor-pointer col-span-3 sm:col-span-1 p-4 flex flex-col" data-v-84dc3362><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-84dc3362><path d="M20 10.4217C21.9467 9.12833 24.59 8.33333 27.5 8.33333C30.4117 8.33333 33.0533 9.12833 35 10.4217V32.0883C33.0533 30.795 30.4117 30 27.5 30C24.59 30 21.9467 30.795 20 32.0883M20 10.4217V32.0883V10.4217ZM20 10.4217C18.0533 9.12833 15.41 8.33333 12.5 8.33333C9.59 8.33333 6.94667 9.12833 5 10.4217V32.0883C6.94667 30.795 9.59 30 12.5 30C15.41 30 18.0533 30.795 20 32.0883V10.4217Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-v-84dc3362></path><rect x="23.3334" y="13.3333" width="8.33334" height="1.66667" rx="0.833333" fill="currentColor" data-v-84dc3362></rect><rect x="8.33337" y="13.3333" width="8.33333" height="1.66667" rx="0.833333" fill="currentColor" data-v-84dc3362></rect><rect x="8.33337" y="18.3333" width="8.33333" height="1.66667" rx="0.833333" fill="currentColor" data-v-84dc3362></rect><rect x="8.33337" y="23.3333" width="8.33333" height="1.66667" rx="0.833334" fill="currentColor" data-v-84dc3362></rect><rect x="23.3334" y="18.3333" width="8.33334" height="1.66667" rx="0.833333" fill="currentColor" data-v-84dc3362></rect><rect x="23.3334" y="23.3333" width="8.33334" height="1.66667" rx="0.833334" fill="currentColor" data-v-84dc3362></rect></svg><h5 class="font-semibold text-xl mt-4" data-v-84dc3362>Documentation</h5><p class="mt-2" data-v-84dc3362>${
-    __vite_ssr_import_2__.ssrInterpolate($props.readDocs)
-  }</p></a><a href="https://github.com/nuxt/framework" target="_blank" rel="noopener" class="cursor-pointer gradient-border col-span-3 sm:col-span-1 p-4 flex flex-col" data-v-84dc3362><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-84dc3362><path fill-rule="evenodd" clip-rule="evenodd" d="M20 3.33333C10.795 3.33333 3.33337 10.8067 3.33337 20.0283C3.33337 27.4033 8.10837 33.6617 14.7317 35.8683C15.565 36.0217 15.8684 35.5067 15.8684 35.0633C15.8684 34.6683 15.855 33.6167 15.8467 32.225C11.21 33.2333 10.2317 29.9867 10.2317 29.9867C9.47504 28.0567 8.38171 27.5433 8.38171 27.5433C6.86837 26.51 8.49671 26.53 8.49671 26.53C10.1684 26.6467 11.0484 28.25 11.0484 28.25C12.535 30.8 14.95 30.0633 15.8984 29.6367C16.0517 28.5583 16.4817 27.8233 16.9584 27.4067C13.2584 26.985 9.36671 25.5517 9.36671 19.155C9.36671 17.3333 10.0167 15.8417 11.0817 14.675C10.91 14.2533 10.3384 12.555 11.245 10.2583C11.245 10.2583 12.645 9.80833 15.8284 11.9683C17.188 11.5975 18.5908 11.4087 20 11.4067C21.4167 11.4133 22.8417 11.5983 24.1734 11.9683C27.355 9.80833 28.7517 10.2567 28.7517 10.2567C29.6617 12.555 29.0884 14.2533 28.9184 14.675C29.985 15.8417 30.6317 17.3333 30.6317 19.155C30.6317 25.5683 26.7334 26.98 23.0217 27.3933C23.62 27.9083 24.1517 28.9267 24.1517 30.485C24.1517 32.715 24.1317 34.5167 24.1317 35.0633C24.1317 35.51 24.4317 36.03 25.2784 35.8667C28.5972 34.7535 31.4823 32.6255 33.5258 29.7834C35.5694 26.9413 36.6681 23.5289 36.6667 20.0283C36.6667 10.8067 29.2034 3.33333 20 3.33333Z" fill="currentColor" data-v-84dc3362></path></svg><h5 class="font-semibold text-xl mt-4" data-v-84dc3362>GitHub</h5><p class="mt-2" data-v-84dc3362>${
-    __vite_ssr_import_2__.ssrInterpolate($props.starGitHub)
-  }</p></a><a href="https://twitter.com/nuxt_js" target="_blank" rel="noopener" class="cursor-pointer gradient-border col-span-3 sm:col-span-1 p-4 flex flex-col gap-y-4" data-v-84dc3362><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" data-v-84dc3362><path d="M13.8167 33.7557C26.395 33.7557 33.275 23.334 33.275 14.2973C33.275 14.0007 33.275 13.7057 33.255 13.414C34.5937 12.4449 35.7489 11.245 36.6667 9.87066C35.4185 10.424 34.0943 10.7869 32.7384 10.9473C34.1661 10.0924 35.2346 8.74791 35.745 7.164C34.4029 7.96048 32.9345 8.52188 31.4034 8.824C30.3724 7.72694 29.0084 7.00039 27.5228 6.75684C26.0371 6.51329 24.5126 6.76633 23.1852 7.47678C21.8579 8.18723 20.8018 9.31545 20.1805 10.6868C19.5592 12.0581 19.4073 13.596 19.7484 15.0623C17.0294 14.9261 14.3694 14.2195 11.9411 12.9886C9.51285 11.7577 7.37059 10.0299 5.65337 7.91733C4.7789 9.42267 4.51102 11.2047 4.90427 12.9006C5.29751 14.5965 6.32232 16.0788 7.77004 17.0457C6.68214 17.0142 5.61776 16.7215 4.66671 16.1923V16.279C4.66736 17.8578 5.21403 19.3878 6.21404 20.6096C7.21404 21.8313 8.60582 22.6696 10.1534 22.9823C9.14639 23.2569 8.08986 23.2968 7.06504 23.099C7.50198 24.4581 8.35284 25.6467 9.49859 26.4984C10.6443 27.35 12.0277 27.8223 13.455 27.849C12.0369 28.9633 10.413 29.7871 8.67625 30.2732C6.93948 30.7594 5.12391 30.8984 3.33337 30.6823C6.46105 32.6896 10.1004 33.7542 13.8167 33.749" fill="currentColor" data-v-84dc3362></path></svg><h5 class="font-semibold text-xl" data-v-84dc3362>Twitter</h5><p data-v-84dc3362>${
-    __vite_ssr_import_2__.ssrInterpolate($props.followTwitter)
-  }</p></a></div></div>`)
+  const _component_router_link = __vite_ssr_import_0__.resolveComponent("router-link")
+
+  _push(`<div${__vite_ssr_import_1__.ssrRenderAttrs(__vite_ssr_import_0__.mergeProps({ class: "h-12 w-full bg-gray-800" }, _attrs))}><div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start"><div class="hidden sm:block sm:ml-6"><div class="flex h-12 items-center">`)
+  _push(__vite_ssr_import_1__.ssrRenderComponent(_component_router_link, {
+    to: "/",
+    href: "#",
+    class: "bg-gray-900 text-white px-3 py-2 rounded-md font-semibold"
+  }, {
+    default: __vite_ssr_import_0__.withCtx((_, _push, _parent, _scopeId) => {
+      if (_push) {
+        _push(`Home`)
+      } else {
+        return [
+          __vite_ssr_import_0__.createTextVNode("Home")
+        ]
+      }
+    }),
+    _: 1 /* STABLE */
+  }, _parent))
+  _push(__vite_ssr_import_1__.ssrRenderComponent(_component_router_link, {
+    to: "/",
+    class: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-semibold"
+  }, {
+    default: __vite_ssr_import_0__.withCtx((_, _push, _parent, _scopeId) => {
+      if (_push) {
+        _push(`Grafy`)
+      } else {
+        return [
+          __vite_ssr_import_0__.createTextVNode("Grafy")
+        ]
+      }
+    }),
+    _: 1 /* STABLE */
+  }, _parent))
+  _push(`</div></div></div></div>`)
 }
 
-const __vite_ssr_import_3__ = await __vite_ssr_import__("/node_modules/@nuxt/ui-templates/dist/templates/welcome.vue?vue&type=style&index=0&scoped=true&lang.css");
 
-
-const __vite_ssr_import_4__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
+const __vite_ssr_import_2__ = await __vite_ssr_import__("/node_modules/vue/dist/vue.cjs.js");
 
 const _sfc_setup = _sfc_main.setup
 _sfc_main.setup = (props, ctx) => {
-  const ssrContext = __vite_ssr_import_4__.useSSRContext()
-  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")
+  const ssrContext = __vite_ssr_import_2__.useSSRContext()
+  ;(ssrContext.modules || (ssrContext.modules = new Set())).add("components/Header.vue")
   return _sfc_setup ? _sfc_setup(props, ctx) : undefined
 }
-const __vite_ssr_import_5__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
+const __vite_ssr_import_3__ = await __vite_ssr_import__("/@id/plugin-vue:export-helper");
 
-__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_5__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__scopeId',"data-v-84dc3362"],['__file',"/home/petr/Documents/meteostanice-web/node_modules/@nuxt/ui-templates/dist/templates/welcome.vue"]]);
-}
-
-
-// --------------------
-// Request: /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue?vue&type=style&index=0&scoped=true&lang.css
-// Parents: 
-// - /node_modules/@nuxt/ui-templates/dist/templates/welcome.vue ($id_c5e87b7e)
-// Dependencies: 
-
-// --------------------
-const $id_738782c9 = async function (global, module, exports, __vite_ssr_exports__, __vite_ssr_import_meta__, __vite_ssr_import__, __vite_ssr_dynamic_import__, __vite_ssr_exportAll__) {
-__vite_ssr_exports__.default = ".bg-white[data-v-84dc3362]{--tw-bg-opacity:1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.bg-gray-100[data-v-84dc3362]{--tw-bg-opacity:1;background-color:rgba(243,244,246,var(--tw-bg-opacity))}.rounded[data-v-84dc3362]{border-radius:.25rem}.cursor-pointer[data-v-84dc3362]{cursor:pointer}.flex[data-v-84dc3362]{display:flex}.grid[data-v-84dc3362]{display:-ms-grid;display:grid}.flex-col[data-v-84dc3362]{flex-direction:column}.place-content-center[data-v-84dc3362]{place-content:center}.items-end[data-v-84dc3362]{align-items:flex-end}.items-center[data-v-84dc3362]{align-items:center}.justify-end[data-v-84dc3362]{justify-content:flex-end}.justify-center[data-v-84dc3362]{justify-content:center}.justify-between[data-v-84dc3362]{justify-content:space-between}.font-sans[data-v-84dc3362]{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",Segoe UI Symbol,\"Noto Color Emoji\"}.font-mono[data-v-84dc3362]{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.font-medium[data-v-84dc3362]{font-weight:500}.font-bold[data-v-84dc3362]{font-weight:700}.font-semibold[data-v-84dc3362]{font-weight:600}.text-xl[data-v-84dc3362]{font-size:1.25rem;line-height:1.75rem}.text-sm[data-v-84dc3362]{font-size:.875rem;line-height:1.25rem}.text-2xl[data-v-84dc3362]{font-size:1.5rem;line-height:2rem}.mb-2[data-v-84dc3362]{margin-bottom:.5rem}.mb-4[data-v-84dc3362]{margin-bottom:1rem}.mt-4[data-v-84dc3362]{margin-top:1rem}.mt-2[data-v-84dc3362]{margin-top:.5rem}.max-w-5xl[data-v-84dc3362]{max-width:64rem}.min-h-screen[data-v-84dc3362]{min-height:100vh}.p-4[data-v-84dc3362]{padding:1rem}.p-8[data-v-84dc3362]{padding:2rem}.p-1[data-v-84dc3362]{padding:.25rem}.pb-1[data-v-84dc3362]{padding-bottom:.25rem}.fixed[data-v-84dc3362]{position:fixed}.left-0[data-v-84dc3362]{left:0}.right-0[data-v-84dc3362]{right:0}.text-black[data-v-84dc3362]{--tw-text-opacity:1;color:rgba(0,0,0,var(--tw-text-opacity))}.antialiased[data-v-84dc3362]{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-full[data-v-84dc3362]{width:100%}.w-40[data-v-84dc3362]{width:10rem}.z-10[data-v-84dc3362]{z-index:10}.z-20[data-v-84dc3362]{z-index:20}.gap-4[data-v-84dc3362]{grid-gap:1rem;gap:1rem}.gap-y-4[data-v-84dc3362]{grid-row-gap:1rem;-webkit-row-gap:1rem;-moz-row-gap:1rem;row-gap:1rem}.grid-cols-3[data-v-84dc3362]{grid-template-columns:repeat(3,minmax(0,1fr))}.col-span-3[data-v-84dc3362]{-ms-grid-column-span:span 3/span 3;grid-column:span 3/span 3}@media (min-width:640px){.sm\\:text-base[data-v-84dc3362]{font-size:1rem;line-height:1.5rem}.sm\\:pb-2[data-v-84dc3362]{padding-bottom:.5rem}.sm\\:col-span-1[data-v-84dc3362]{-ms-grid-column-span:span 1/span 1;grid-column:span 1/span 1}}@media (min-width:768px){.md\\:gap-8[data-v-84dc3362]{grid-gap:2rem;gap:2rem}}@media (prefers-color-scheme:dark){.dark\\:bg-black[data-v-84dc3362]{--tw-bg-opacity:1;background-color:rgba(0,0,0,var(--tw-bg-opacity))}.dark\\:bg-white\\/10[data-v-84dc3362]{--tw-bg-opacity:.1;background-color:rgba(255,255,255,var(--tw-bg-opacity))}.dark\\:text-white[data-v-84dc3362]{--tw-text-opacity:1;color:rgba(255,255,255,var(--tw-text-opacity))}}.spotlight[data-v-84dc3362]{background:linear-gradient(45deg,#00dc82,#36e4da 50%,#0047e1);bottom:-40vh;filter:blur(20vh);height:50vh}.spotlight-wrapper[data-v-84dc3362]{opacity:.5;transition:opacity .4s ease-in}.nuxt-logo:hover~.spotlight-wrapper[data-v-84dc3362]{opacity:.95}.gradient-border[data-v-84dc3362]{-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:.5rem;position:relative;width:100%}@media (prefers-color-scheme:light){.gradient-border[data-v-84dc3362]{background-color:#ffffff4d}.gradient-border[data-v-84dc3362]:before{background:linear-gradient(90deg,#e2e2e2,#e2e2e2 25%,#00dc82 50%,#36e4da 75%,#0047e1)}}@media (prefers-color-scheme:dark){.gradient-border[data-v-84dc3362]{background-color:#1414144d}.gradient-border[data-v-84dc3362]:before{background:linear-gradient(90deg,#303030,#303030 25%,#00dc82 50%,#36e4da 75%,#0047e1)}}.gradient-border[data-v-84dc3362]:before{background-position:0 0;background-size:400% auto;border-radius:.5rem;bottom:0;content:\"\";left:0;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.5;padding:2px;position:absolute;right:0;top:0;transition:background-position .3s ease-in-out,opacity .2s ease-in-out;width:100%}.gradient-border[data-v-84dc3362]:hover:before{background-position:-50% 0;opacity:1}";
+__vite_ssr_exports__.default = /*#__PURE__*/__vite_ssr_import_3__.default(_sfc_main, [['ssrRender',_sfc_ssrRender],['__file',"/home/petr/Documents/meteostanice-web/components/Header.vue"]]);
 }
 
 
@@ -3583,7 +3818,17 @@ const __modules__ = {
   "/node_modules/nuxt/dist/head/runtime/plugin.mjs": $id_a2650341,
   "/node_modules/nuxt/dist/head/runtime/components.mjs": $id_b2a29d6f,
   "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/meta.config.mjs": $id_3e9021cd,
-  "/node_modules/nuxt/dist/app/plugins/router.mjs": $id_7fe121f6,
+  "/node_modules/nuxt/dist/pages/runtime/router.mjs": $id_a090977b,
+  "/node_modules/nuxt/dist/pages/runtime/page.mjs": $id_5fc14cdc,
+  "/node_modules/nuxt/dist/pages/runtime/utils.mjs": $id_80f433aa,
+  "/node_modules/nuxt/dist/app/components/utils.mjs": $id_69c52686,
+  "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/routes.mjs": $id_c194d63d,
+  "/pages/index.vue?macro=true": $id_5dd70240,
+  "/node_modules/vue/server-renderer/index.js": $id_b215fa1c,
+  "/@id/plugin-vue:export-helper": $id_bbb863c1,
+  "/pages/index.vue": $id_cca58e97,
+  "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/router.options.mjs": $id_84745e83,
+  "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/middleware.mjs": $id_6df1d5ed,
   "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/root-component.mjs": $id_4834c066,
   "/node_modules/nuxt/dist/app/components/nuxt-root.vue": $id_e9bfada3,
   "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/error-component.mjs": $id_e0b4985f,
@@ -3592,17 +3837,15 @@ const __modules__ = {
   "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/imports.mjs": $id_780fb80c,
   "/node_modules/nuxt/dist/app/compat/vue-demi.mjs": $id_a8110be7,
   "/node_modules/nuxt/dist/app/compat/capi.mjs": $id_0c5717a4,
-  "/node_modules/vue/server-renderer/index.js": $id_b215fa1c,
+  "/node_modules/nuxt/dist/pages/runtime/composables.mjs": $id_ff6ed455,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css": $id_e68b6b38,
-  "/@id/plugin-vue:export-helper": $id_bbb863c1,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue": $id_14c8b574,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css": $id_a2b3b709,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue": $id_bc2d74a1,
   "/node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css": $id_2691164c,
   "/@id/virtual:nuxt:/home/petr/Documents/meteostanice-web/.nuxt/app-component.mjs": $id_69e0800f,
   "/app.vue": $id_2b46e842,
-  "/node_modules/@nuxt/ui-templates/dist/templates/welcome.vue": $id_c5e87b7e,
-  "/node_modules/@nuxt/ui-templates/dist/templates/welcome.vue?vue&type=style&index=0&scoped=true&lang.css": $id_738782c9
+  "/components/Header.vue": $id_4e284fc3
 }
 
 
