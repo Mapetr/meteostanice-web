@@ -4,7 +4,7 @@
       <div class="hidden sm:block sm:ml-6">
         <div class="flex h-12 items-center">
           <router-link to="/" href="#" class="bg-gray-900 text-white px-3 py-2 rounded-md font-semibold">Home</router-link>
-          <router-link to="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-semibold">Grafy</router-link>
+          <router-link to="/grafy" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-semibold">Grafy</router-link>
         </div>
       </div>
     </div>

@@ -8,6 +8,12 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^5.1.2",
+    "miniflare": "^2.5.1",
     "nuxt": "3.0.0-rc.4"
+  },
+  "dependencies": {
+    "@nuxtjs/sentry": "^5.1.7",
+    "nuxt-socket-io": "^2.0.3",
+    "socket.io-client": "^4.5.1"
   }
 }

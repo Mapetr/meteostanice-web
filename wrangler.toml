@@ -1,0 +1,15 @@
+name = "meteo-web"
+type = "javascript"
+account_id = "dceae238c9ad643c9133f9b9c5012a26"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-04-07"
+
+[site]
+bucket = ".output/public"
+entry-point = ".output"
+
+[build]
+command = ""
+upload.format = "service-worker"

@@ -1,21 +1,21 @@
 export default {
-  "publicPath": "/_nuxt/",
-  "all": [
-    "@vite/client",
-    "entry.mjs",
-    "node_modules/@nuxtjs/tailwindcss/dist/runtime/tailwind.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css"
-  ],
-  "initial": [
-    "@vite/client",
-    "entry.mjs",
-    "node_modules/@nuxtjs/tailwindcss/dist/runtime/tailwind.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue?vue&type=style&index=0&scoped=true&lang.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue?vue&type=style&index=0&scoped=true&lang.css",
-    "node_modules/@nuxt/ui-templates/dist/templates/error-dev.vue?vue&type=style&index=0&scoped=true&lang.css"
-  ],
-  "async": [],
-  "modules": {}
+  "node_modules/nuxt/dist/app/entry.mjs": {
+    "file": "entry-acc2712b.mjs",
+    "src": "node_modules/nuxt/dist/app/entry.mjs",
+    "isEntry": true,
+    "dynamicImports": [
+      "pages/index.vue"
+    ],
+    "css": [
+      "entry.e06c2ace.css"
+    ]
+  },
+  "pages/index.vue": {
+    "file": "index-02face83.mjs",
+    "src": "pages/index.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/nuxt/dist/app/entry.mjs"
+    ]
+  }
 }
