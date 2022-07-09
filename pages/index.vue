@@ -68,10 +68,38 @@ export default {
       this.humidity = data[3];
       this.pressure = data[2];
       this.windspeed = data[4];
-      this.winddir = data[5].replace("N", "S").replace("S", "J").replace("E", "V").replace("W", "Z");
-      this.rain = data[6];
+      switch(data[6]) {
+        case "N":
+          this.winddir = "Sever";
+          break;
+        case "NE":
+          this.winddir = "Severovýchod";
+          break;
+        case "E":
+          this.winddir = "Východ";
+          break;
+        case "SE":
+          this.winddir = "Jihovýchod";
+          break;
+        case "S":
+          this.winddir = "Jih";
+          break;
+        case "SW":
+          this.winddir = "Jihozápad";
+          break;
+        case "W":
+          this.winddir = "Západ";
+          break;
+        case "NW":
+          this.winddir = "Severozápad";
+          break;
+        default:
+          this.winddir = "Neznámý";
+          break;
+      }
+      this.rain = data[4];
       this.windgust = data[7];
-      this.rainTotal = data[8];
+      this.rainTotal = 0;
     });
   }
 }
